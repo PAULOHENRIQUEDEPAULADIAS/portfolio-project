@@ -1,0 +1,94 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #0095ff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: clip-path 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+  clip-path: inset(20px 20px 100% 20px);
+}
+
+.overlay.active {
+  clip-path: inset(20px 20px 20px 20px);
+}
+
+.overlayContent {
+  list-style: none;       
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  padding-top: 7%;
+  margin-left: -2%;
+  gap: 1rem;              
+  opacity: 1;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
+}
+
+/* Itens normais do menu */
+.menuItem {
+  display: flex;
+  flex-direction: row;     
+  align-items: baseline;    
+  gap: 5rem; 
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Animação assíncrona menuItem */
+.overlay.active .menuItem:nth-of-type(2) { transition-delay: 0.4s; }
+.overlay.active .menuItem:nth-of-type(3) { transition-delay: 0.6s; }
+.overlay.active .menuItem:nth-of-type(4) { transition-delay: 0.8s; }
+.overlay.active .menuItem:nth-of-type(5) { transition-delay: 1s; }
+.overlay.active .menuItem:nth-of-type(6) { transition-delay: 1.2s; }
+
+.overlay.active .menuItem {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Links */
+.menuItem a {
+  color: #1565c0;
+  font-size: 3rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+  width: 200px;
+}
+
+.menuItem a:hover {
+  color: whitesmoke;
+}
+
+/* Descrições */
+.menuItem span {
+  color: #1565c0;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Ícones sociais */
+.social {
+  display: flex;
+  flex-direction: row-reverse;  /* da direita para esquerda */
+  justify-content: left;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateX(400px); /* desloca para a direita inicialmente */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Animação mais rápida para os ícones sociais */
+.overlay.active .social {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.4s ease, transform 0.4s ease; /* velocidade maior */
+}

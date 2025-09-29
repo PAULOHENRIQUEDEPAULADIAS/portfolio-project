@@ -1,0 +1,19 @@
+.closeButton {
+  display: inline-block;
+  transition: transform 0.9s ease-in-out, letter-spacing 0.2s ease-in-out;
+  transform-origin: center center;
+}
+
+.closeButton:hover {
+  transform: scale(1.05);
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.closeItem {
+  display: flex;
+  justify-content: center;
+  width: 5rem;
+  position: relative;
+  z-index: 1000;
+}

@@ -1,0 +1,25 @@
+.logoIconBox {
+  position: relative; /* necessário para os ícones ficarem sobrepostos */
+  width: 80px;        /* ajuste conforme necessário */
+  height: 80px;       /* ajuste conforme necessário */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ffff;      /* cor padrão do logo */
+  opacity: 0;           /* ícones inativos ficam invisíveis */
+  transition: opacity 0.1s ease-in-out;
+  pointer-events: none; /* não interfere no clique */
+}
+
+.icon.active {
+  opacity: 1;           /* ícone ativo visível */
+}

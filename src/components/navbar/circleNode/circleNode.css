@@ -1,0 +1,19 @@
+.CircleNodesIcon {
+  font-size: 1.5rem;
+  animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.CircleNodeItem {
+  position: relative;
+
+  z-index: 1000;
+}

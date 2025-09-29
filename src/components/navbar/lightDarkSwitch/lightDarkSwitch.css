@@ -1,0 +1,22 @@
+.lightDarkSwitch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  perspective: 600px;
+  position: relative;
+  z-index: 1000;
+  color: #ffff;
+}
+
+.lightDarkSwitch .iconSwitch {
+  font-size: 1.5rem;
+  transition: transform 0.4s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.lightDarkSwitch.rotating .iconSwitch {
+  transform: rotate(300deg);
+}

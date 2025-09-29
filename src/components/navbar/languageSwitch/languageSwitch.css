@@ -1,0 +1,15 @@
+.languageIcon {
+  font-size: 1.75rem;
+  transition: transform 0.9s ease-in-out;
+}
+
+.languageIcon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.languageSwitchBox {
+    position: relative;
+
+  z-index: 1000;
+}

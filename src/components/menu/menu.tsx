@@ -1,13 +1,18 @@
 import "./menu.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MenuWrap from "../navbar/menuWrap/menuWrap";
 import CloseWrap from "../navbar/closeWrap/closeWrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import EmailIcon from "./emailIcon/emailIcon";
 import GithubIcon from "./githubIcon/githubIcon";
 
 function Menu() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
 
   return (
     <>
@@ -27,8 +32,8 @@ export function MenuOverlay({ open }: OverlayProps) {
     <div className={`overlay ${open ? "active" : ""}`}>
       <ul className="overlayContent">
         <li className="social">
-          <EmailIcon/>
-          <GithubIcon/>
+          <EmailIcon />
+          <GithubIcon />
         </li>
         <li className="menuItem">
           <Link to="/">Home</Link>
@@ -39,11 +44,8 @@ export function MenuOverlay({ open }: OverlayProps) {
           <span>Entenda um pouco melhor sobre mim e meus hobbies</span>
         </li>
         <li className="menuItem">
-          <Link to="/feedback">Feedback</Link>
-          <span>
-            Fique à vontade para me enviar um feedback (Poderá ser postado na
-            tela inicial)
-          </span>
+          <Link to="/work">Work</Link>
+          <span>Conheça alguns dos meus projetos.</span>
         </li>
         <li className="menuItem">
           <Link to="/album">Album</Link>

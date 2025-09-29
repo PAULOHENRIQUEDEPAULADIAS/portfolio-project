@@ -1,6 +1,5 @@
 import React from "react";
 
-import NavBar from "../navbar/navbar";
 
 type TitleProps = {
     children: React.ReactNode
@@ -21,7 +20,6 @@ const Paragraph = ({ children }: ParagraphProps ) =>{
 function Home() {
     return(   
         <main>
-            <NavBar></NavBar>
             <div>
                 <Title>Olá, meu nome é <span>Paulo</span>.</Title>
                 <Paragraph>Sou um entusiasta de tecnologia, nascido em São Paulo - Brasil.</Paragraph>

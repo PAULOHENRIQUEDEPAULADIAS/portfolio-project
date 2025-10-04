@@ -1,0 +1,9 @@
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link:hover .card {
+  transform: translateY(-4px);
+  transition: 0.2s;
+}

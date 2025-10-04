@@ -16,7 +16,7 @@ function Logo() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent(prev => (prev + 1) % icons.length);
-    }, 18000000 );
+    }, 15000 );
 
     return () => clearInterval(interval);
   }, []);

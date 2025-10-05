@@ -6,7 +6,7 @@ function Card({ title, desc, link, stack, onClick }) {
       <div className="card h-100 shadow-sm">
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
-          <p className="card-text">{truncate(desc, 100)}</p>
+          <p className="card-text">{truncate(desc, 50)}</p>
           {stack && (
             <div className="stacks">
               {stack.map((tech, index) => (

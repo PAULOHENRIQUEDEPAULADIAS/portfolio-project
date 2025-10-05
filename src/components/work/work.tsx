@@ -12,7 +12,7 @@ function Work() {
   const projects = [
     {
       title: "Controle Financeiro",
-      desc: "App simples para gerenciar despesas pessoais.",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo, doloribus ab harum hic minima sapiente minus maiores? Officia qui corrupti aspernatur incidunt voluptas. Cumque minima deserunt natus temporibus quo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium provident minus neque aperiam eius quibusdam, tempore quos voluptatem corrupti sed? Iure ea temporibus consequatur sed tempore, culpa incidunt laudantium ipsum!",
       link: "https://github.com/seuuser/finance-app",
       stack: ["React", "Node.js", "MongoDB"],
     },

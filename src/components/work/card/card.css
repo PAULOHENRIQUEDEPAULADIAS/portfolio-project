@@ -1,3 +1,11 @@
+.card {
+  background-color: var(--card-bg-color);
+  color: var(--card-text-color);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .card-link {
   text-decoration: none;
   color: inherit;
@@ -5,5 +13,5 @@
 
 .card-link:hover .card {
   transform: translateY(-4px);
-  transition: 0.2s;
+  transition: transform 0.2s ease;
 }

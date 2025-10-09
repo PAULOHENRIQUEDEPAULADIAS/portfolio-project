@@ -1,0 +1,103 @@
+/* container principal */
+.writing-container {
+  padding: 20px;
+  transition: filter 0.3s ease;
+}
+
+.blurred {
+  filter: blur(4px);
+}
+
+/* cards */
+.text-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.text-card {
+  background-color: var(--color-bg);
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid black;
+}
+
+.text-card:hover {
+  border: 1px solid black;
+  
+}
+
+/* modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  width: 90%;
+  height: 90%;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden; /* importante */
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* área do texto com scroll se necessário */
+.modal-text {
+  flex: 1 1 auto; /* ocupa o máximo possível */
+  overflow-y: auto ;
+  margin-bottom: 10px;
+  text-align: justify;
+  margin: 2%;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+
+/* data fixa no rodapé do modal */
+.modal-date {
+  flex-shrink: 0;
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+/* markdown styling */
+.modal-text h1, .modal-text h2, .modal-text h3 {
+  margin: 10px 0;
+}
+
+.modal-text p {
+  margin: 10px 0;
+}
+
+.modal-text ul {
+  margin: 10px 0 10px 20px;
+}
+
+.modal-text a {
+  color: #4da6ff;
+  text-decoration: underline;
+}

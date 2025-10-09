@@ -1,10 +1,9 @@
 import "./work.css";
+import Footer from "./footer/footer";
 
 import { useState } from "react";
 import Card from "./card/card";
 import Modal from "./modal/modal";
-
-
 
 function Work() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -21,110 +20,22 @@ function Work() {
       desc: "Consulta APIs para exibir dados meteorológicos.",
       link: "https://github.com/seuuser/weather-app",
       stack: ["React", "Bootstrap", "OpenWeather API"],
-    },  
-        {
-      title: "Controle Financeiro",
-      desc: "App simples para gerenciar despesas pessoais.",
-      link: "https://github.com/seuuser/finance-app",
-      stack: ["React", "Node.js", "MongoDB"],
-    },
-    {
+    },{
       title: "Clima em Tempo Real",
       desc: "Consulta APIs para exibir dados meteorológicos.",
       link: "https://github.com/seuuser/weather-app",
       stack: ["React", "Bootstrap", "OpenWeather API"],
-    }, 
-        {
-      title: "Controle Financeiro",
-      desc: "App simples para gerenciar despesas pessoais.",
-      link: "https://github.com/seuuser/finance-app",
-      stack: ["React", "Node.js", "MongoDB"],
-    },
-    {
+    },{
       title: "Clima em Tempo Real",
       desc: "Consulta APIs para exibir dados meteorológicos.",
       link: "https://github.com/seuuser/weather-app",
       stack: ["React", "Bootstrap", "OpenWeather API"],
-    }, 
-        {
-      title: "Controle Financeiro",
-      desc: "App simples para gerenciar despesas pessoais.",
-      link: "https://github.com/seuuser/finance-app",
-      stack: ["React", "Node.js", "MongoDB"],
-    },
-    {
+    },{
       title: "Clima em Tempo Real",
       desc: "Consulta APIs para exibir dados meteorológicos.",
       link: "https://github.com/seuuser/weather-app",
       stack: ["React", "Bootstrap", "OpenWeather API"],
-    }, 
-        {
-      title: "Controle Financeiro",
-      desc: "App simples para gerenciar despesas pessoais.",
-      link: "https://github.com/seuuser/finance-app",
-      stack: ["React", "Node.js", "MongoDB"],
     },
-    {
-      title: "Clima em Tempo Real",
-      desc: "Consulta APIs para exibir dados meteorológicos.",
-      link: "https://github.com/seuuser/weather-app",
-      stack: ["React", "Bootstrap", "OpenWeather API"],
-    },     {
-      title: "Controle Financeiro",
-      desc: "App simples para gerenciar despesas pessoais.",
-      link: "https://github.com/seuuser/finance-app",
-      stack: ["React", "Node.js", "MongoDB"],
-    },
-    {
-      title: "Clima em Tempo Real",
-      desc: "Consulta APIs para exibir dados meteorológicos.",
-      link: "https://github.com/seuuser/weather-app",
-      stack: ["React", "Bootstrap", "OpenWeather API"],
-    },     {
-      title: "Controle Financeiro",
-      desc: "App simples para gerenciar despesas pessoais.",
-      link: "https://github.com/seuuser/finance-app",
-      stack: ["React", "Node.js", "MongoDB"],
-    },
-    {
-      title: "Clima em Tempo Real",
-      desc: "Consulta APIs para exibir dados meteorológicos.",
-      link: "https://github.com/seuuser/weather-app",
-      stack: ["React", "Bootstrap", "OpenWeather API"],
-    },     {
-      title: "Controle Financeiro",
-      desc: "App simples para gerenciar despesas pessoais.",
-      link: "https://github.com/seuuser/finance-app",
-      stack: ["React", "Node.js", "MongoDB"],
-    },
-    {
-      title: "Clima em Tempo Real",
-      desc: "Consulta APIs para exibir dados meteorológicos.",
-      link: "https://github.com/seuuser/weather-app",
-      stack: ["React", "Bootstrap", "OpenWeather API"],
-    },     {
-      title: "Controle Financeiro",
-      desc: "App simples para gerenciar despesas pessoais.",
-      link: "https://github.com/seuuser/finance-app",
-      stack: ["React", "Node.js", "MongoDB"],
-    },
-    {
-      title: "Clima em Tempo Real",
-      desc: "Consulta APIs para exibir dados meteorológicos.",
-      link: "https://github.com/seuuser/weather-app",
-      stack: ["React", "Bootstrap", "OpenWeather API"],
-    },     {
-      title: "Controle Financeiro",
-      desc: "App simples para gerenciar despesas pessoais.",
-      link: "https://github.com/seuuser/finance-app",
-      stack: ["React", "Node.js", "MongoDB"],
-    },
-    {
-      title: "Clima em Tempo Real",
-      desc: "Consulta APIs para exibir dados meteorológicos.",
-      link: "https://github.com/seuuser/weather-app",
-      stack: ["React", "Bootstrap", "OpenWeather API"],
-    }, 
   ];
 
   return (
@@ -134,16 +45,18 @@ function Work() {
       </div>
       <div className="row g-3 WorkCards">
         {projects.map((proj, i) => (
-            <Card {...proj} onClick={() => setSelectedProject(proj)} />
+          <Card {...proj} onClick={() => setSelectedProject(proj)} />
         ))}
 
         {selectedProject && (
           <Modal
             project={selectedProject}
             onClose={() => setSelectedProject(null)}
+            
           />
         )}
       </div>
+      <Footer />
     </div>
   );
 }

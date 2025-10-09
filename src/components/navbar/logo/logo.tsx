@@ -28,6 +28,7 @@ function Logo() {
           key={index}
           icon={icon}
           className={`icon ${index === current ? "active" : ""}`}
+          style={{ color: "var(--color-text)" }}
         />
       ))}
     </Link>

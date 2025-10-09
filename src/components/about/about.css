@@ -44,6 +44,13 @@
   text-align: justify;
 }
 
+.aboutMe2Text span{
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
 /* São Paulo image: Positioned to bleed off the page, overlapped by text */
 .aboutMe2Img {
   position: absolute;

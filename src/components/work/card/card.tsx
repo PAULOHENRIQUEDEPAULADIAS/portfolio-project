@@ -5,7 +5,7 @@ function Card({ title, desc, link, stack, onClick }) {
     <div className="col-sm-6" onClick={onClick} style={{ cursor: "pointer" }}>
       <div className="card h-100 shadow-sm">
         <div className="card-body">
-          <h5 className="card-title">{title}</h5>
+          <h2 className="card-title">{title}</h2>
           <p className="card-text">{truncate(desc, 50)}</p>
           {stack && (
             <div className="stacks">

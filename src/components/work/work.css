@@ -17,3 +17,8 @@
   flex: 1 1 300px; /* cresce e encolhe, largura mínima 300px */
   max-width: 400px;
 }
+
+#Footer{
+  margin-top: 10%;
+}
+

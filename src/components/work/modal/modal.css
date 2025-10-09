@@ -1,12 +1,8 @@
-/* Fundo escurecido + desfocado */
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   backdrop-filter: blur(6px);
-  background-color: rgba(0, 0, 0, 0.6); /* Um pouco mais escuro */
+  background-color: var(--modal-overlay-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,21 +10,21 @@
   animation: fadeInOverlay 0.3s ease;
 }
 
-/* Caixa central do modal */
+
 .modal-content {
-  background: linear-gradient(135deg, #000000 0%, #000000 100%); /* Gradiente sutil */
+  background-color: var(--modal-content-bg);
+  color: var(--modal-text-color);
   border-radius: 16px;
-  padding: 0; /* Removido pra seções controlarem */
+  padding: 0;
   max-width: 600px;
   width: 90%;
   max-height: 80vh;
-  overflow-y: auto; /* Scroll se desc for longa */
+  overflow-y: auto;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   position: relative;
   animation: slideUp 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Header */
 .modal-header {
   display: flex;
   justify-content: space-between;
@@ -44,7 +40,6 @@
   font-weight: 600;
 }
 
-/* Body */
 .modal-body {
   padding: 0 2rem 1.5rem;
 }
@@ -54,7 +49,7 @@
   line-height: 1.6;
   color: #555;
   margin-bottom: 1.5rem;
-  white-space: pre-wrap; /* Preserva quebras de linha na desc */
+  white-space: pre-wrap;
 }
 
 .stacks-section h3 {
@@ -66,7 +61,7 @@
 
 .stacks-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsivo: 2-3 colunas em desktop, 1 em mobile */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
@@ -82,7 +77,7 @@
   border: 1px solid #dee2e6;
 }
 
-/* Footer */
+
 .modal-footer {
   padding: 1rem 2rem 2rem;
   border-top: 1px solid #e9ecef;
@@ -113,7 +108,7 @@
   font-size: 1.2rem;
 }
 
-/* Animações */
+
 @keyframes fadeInOverlay {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -130,7 +125,7 @@
   }
 }
 
-/* Mobile */
+
 @media (max-width: 576px) {
   .modal-content {
     width: 95%;
@@ -147,6 +142,6 @@
   }
   
   .stacks-grid {
-    grid-template-columns: 1fr; /* Uma por linha em mobile */
+    grid-template-columns: 1fr; 
   }
 }

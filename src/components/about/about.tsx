@@ -22,24 +22,24 @@ function About() {
       <div className="aboutMe2">
         <div className="aboutMe2Text">
           <p>
-            Crescer na zona Sul de São Paulo não é exatamente o universo
-            tecnológico, mas pude explorar e crescer ao ar livre. Quando não
+            <span>Crescer na zona Sul de São Paulo não é exatamente o universo
+            tecnológico, mas pude explorar bastante ao ar livre. Quando não
             estava fora de casa, provavelmente estaria jogando vídeo games, o
             que proporcionou pensamento criativo aguçado tanto dentro quanto
             fora das telas. Muita coisa mudou desde então, e todas elas
-            contribuiram de alguma forma a construir quem sou hoje.
+            contribuiram de alguma forma a construir quem sou hoje.</span>
             <br />
             <br />
-            Após concluir minha primeira graduação em 2016, me mudei para
+            <span>Após concluir minha primeira graduação em 2016, me mudei para
             Dublin, Irlanda, visando estudo de inglês, onde vivi de meados de
             2018 até início de 2022, conquistando minha segunda graduação
             (ambas em negócios). Hoje, curso Bacharelado em Engenharia de
             Software, e estou combinando ambos os mundos de uma forma bem
-            única.
+            única.</span>
             <br />
             <br />
-            Atualmente, carrego uma bagagem do mercado financeiro contábil,
-            que aos poucos estou aplicando nos meus mais recentes estudos.
+            <span>Atualmente, carrego uma bagagem do mercado financeiro contábil,
+            que aos poucos estou aplicando nos meus mais recentes estudos.</span>
           </p>
         </div>
         <div className="aboutMe2Img">

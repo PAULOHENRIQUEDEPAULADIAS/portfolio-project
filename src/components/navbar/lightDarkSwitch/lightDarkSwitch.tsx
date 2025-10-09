@@ -1,14 +1,17 @@
 import React, { useState } from "react";
-import "./lightDarkSwitch.css";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import "./lightDarkSwitch.css";
 
-const lightIcon = <FontAwesomeIcon icon={faSun} className="iconSwitch" />;
-const darkIcon = <FontAwesomeIcon icon={faMoon} className="iconSwitch" />;
+const lightIcon = <FontAwesomeIcon icon={faSun} className="iconSwitch" style={{ color: "var(--color-text)" }}/>;
+const darkIcon = <FontAwesomeIcon icon={faMoon} className="iconSwitch" style={{ color: "var(--color-text)" }}/>;
 
-function LightDarkSwitch() {
-  const [mode, setMode] = useState<"light" | "dark">("light");
+interface LightDarkSwitchProps {
+  toggleTheme: () => void;
+  currentTheme: "light" | "dark";
+}
+
+function LightDarkSwitch({ toggleTheme, currentTheme }: LightDarkSwitchProps) {
   const [animating, setAnimating] = useState(false);
 
   const handleClick = () => {
@@ -16,7 +19,7 @@ function LightDarkSwitch() {
     setAnimating(true);
 
     setTimeout(() => {
-      setMode(mode === "light" ? "dark" : "light");
+      toggleTheme(); // chama a função do App
       setAnimating(false);
     }, 400);
   };
@@ -26,7 +29,7 @@ function LightDarkSwitch() {
       className={`lightDarkSwitch ${animating ? "rotating" : ""}`}
       onClick={handleClick}
     >
-      {mode === "light" ? lightIcon : darkIcon}
+      {currentTheme === "light" ? lightIcon : darkIcon}
     </div>
   );
 }

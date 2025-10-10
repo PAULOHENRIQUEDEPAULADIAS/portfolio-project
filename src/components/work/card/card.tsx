@@ -1,6 +1,17 @@
 import "./card.css";
 
-function Card({ title, desc, link, stack, onClick }) {
+interface Project {
+  title: string;
+  desc: string;
+  stack: string[];
+}
+
+interface CardProps extends Project {
+  onClick: () => void;
+}
+
+
+function Card({ title, desc, stack, onClick }: CardProps) {
   return (
     <div className="col-sm-6" onClick={onClick} style={{ cursor: "pointer" }}>
       <div className="card h-100 shadow-sm">
@@ -23,7 +34,7 @@ function Card({ title, desc, link, stack, onClick }) {
   );
 }
 
-function truncate(text, maxLength) {
+function truncate(text: string, maxLength: number) {
   return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
 }
 

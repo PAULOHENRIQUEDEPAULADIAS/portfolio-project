@@ -4,7 +4,7 @@ import { faWolfPackBattalion } from "@fortawesome/free-brands-svg-icons";
 import { faBugs, faCat, faCow, faCrow, faDog, faDove, faDragon, faFish, faHippo, faHorse, faKiwiBird, faOtter, faSpider } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 
 const icons = [
   faWolfPackBattalion, faDog, faHippo, faOtter, faFish, faDragon, faKiwiBird, faSpider, faHorse, faDove, faCat, faCrow, faBugs, faCow

@@ -1,9 +1,23 @@
 import "./modal.css";
 import { FaGithub } from "react-icons/fa"; // Instale: npm i react-icons
 
-function Modal({ project, onClose }) {
-  const handleBackgroundClick = (e) => {
-    if (e.target.classList.contains("modal-overlay")) {
+
+interface ModalProps {
+  project: Project;
+  onClose: () => void;
+}
+
+export interface Project {
+  title: string;
+  desc: string;
+  link: string;
+  stack: string[];
+  fullDesc?: string; // opcional
+}
+
+function Modal({ project, onClose }: ModalProps) {
+  const handleBackgroundClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if ((e.target as HTMLElement).classList.contains("modal-overlay")) {
       onClose();
     }
   };
@@ -29,7 +43,7 @@ function Modal({ project, onClose }) {
           <div className="stacks-section">
             <h3>Tecnologias Usadas</h3>
             <div className="stacks-grid">
-              {project.stack.map((tech, index) => (
+              {project.stack.map((tech: string, index: number) => (
                 <span key={index} className="tech-badge">
                   {tech}
                 </span>

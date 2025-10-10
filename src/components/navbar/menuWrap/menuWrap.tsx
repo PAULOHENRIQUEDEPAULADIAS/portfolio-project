@@ -1,5 +1,5 @@
 import "./menuWrap.css";
-import React from "react";
+
 
 type MenuWrapProps = {
   className?: string;

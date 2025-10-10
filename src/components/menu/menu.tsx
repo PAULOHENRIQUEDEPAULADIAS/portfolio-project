@@ -1,5 +1,5 @@
 import "./menu.css";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import MenuWrap from "../navbar/menuWrap/menuWrap";
 import CloseWrap from "../navbar/closeWrap/closeWrap";
 import { Link, useLocation } from "react-router-dom";

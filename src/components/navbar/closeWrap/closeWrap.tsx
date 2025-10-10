@@ -1,5 +1,4 @@
 import "./CloseWrap.css";
-import React from "react";
 
 type CloseProps = {
   className?: string;

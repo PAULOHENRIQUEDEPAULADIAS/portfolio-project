@@ -1,7 +1,7 @@
 /* General container for the About page */
 .aboutContent {
   position: relative;
-  width: 100%;
+  width: inherit;
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -164,7 +164,7 @@
   .aboutMe2Text,
   .AboutHobbies1Text,
   .AboutHobbies2Text {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
   }
 
@@ -175,8 +175,10 @@
   .aboutMe2,
   .AboutHobbies1,
   .AboutHobbies2 {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .AboutHobbies1Img,

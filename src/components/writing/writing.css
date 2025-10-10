@@ -2,6 +2,7 @@
 .writing-container {
   padding: 20px;
   transition: filter 0.3s ease;
+  margin-top: 5rem;
 }
 
 .blurred {

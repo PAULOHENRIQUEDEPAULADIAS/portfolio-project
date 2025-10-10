@@ -29,6 +29,7 @@
   opacity: 1;
   transform: scale(0.8);
   transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
+  margin-top: 3rem;
 }
 
 /* Itens normais do menu */
@@ -92,3 +93,12 @@
   transform: translateX(0);
   transition: opacity 0.4s ease, transform 0.4s ease; /* velocidade maior */
 }
+
+@media (max-width: 600px) {
+  .overlayContent {
+    margin-top: 5rem;
+  }
+  .menuItem span{
+    color: transparent;
+  }
+};

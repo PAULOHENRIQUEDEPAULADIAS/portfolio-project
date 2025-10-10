@@ -6,7 +6,12 @@ import Card from "./card/card";
 import Modal from "./modal/modal";
 
 function Work() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<{
+  title: string;
+  desc: string;
+  link: string;
+  stack: string[];
+} | null>(null);
 
   const projects = [
     {
@@ -45,7 +50,7 @@ function Work() {
       </div>
       <div className="row g-3 WorkCards">
         {projects.map((proj, i) => (
-          <Card {...proj} onClick={() => setSelectedProject(proj)} />
+          <Card key={i} {...proj} onClick={() => setSelectedProject(proj)} />
         ))}
 
         {selectedProject && (

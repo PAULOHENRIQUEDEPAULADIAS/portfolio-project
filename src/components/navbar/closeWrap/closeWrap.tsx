@@ -1,4 +1,4 @@
-import "./CloseWrap.css";
+import "./closeWrap.css";
 
 type CloseProps = {
   className?: string;

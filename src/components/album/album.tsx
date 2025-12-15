@@ -1,11 +1,22 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import "./album.css";
 
-import Image1 from "../../assets/imgMocks/closeup-tiro-de-uma-linda-borboleta-com-texturas-interessantes-em-uma-flor-de-petalas-de-laranja_181624-7640.jpg";
-import Image2 from "../../assets/imgMocks/como-otimizar-imagens-web-internet1.jpg";
-import Image3 from "../../assets/imgMocks/images.jpeg";
-import Image4 from "../../assets/imgMocks/pexels-nitin-creative-46710.jpg";
-import Image5 from "../../assets/imgMocks/ponte-de-madeira-para-a-praia-durante-o-por-do-sol_181624-18247.jpg";
+import Image1 from "../../assets/img/voando_alto_10_25.jpg";
+import Image2 from "../../assets/img/lamen_aska_sp_05_25.jpg";
+import Image3 from "../../assets/img/mercadao_sp_12_25.jpg";
+import Image4 from "../../assets/img/centro_cultural_mario_quintana_poa_10_25.jpg";
+import Image5 from "../../assets/img/elis_Regina_poa_10_25.jpg";
+import Image6 from "../../assets/img/laranjal_rs_10_25.jpg";
+import Image7 from "../../assets/img/melhor_lugar_da_irlanda_07_19.jpg";
+import Image8 from "../../assets/img/peixe_da_sorte_belfast_09_20.jpg";
+import Image9 from "../../assets/img/museo_do_titanic_belfast_09_20.jpg";
+import Image10 from "../../assets/img/olives_the_cork_market_cork_09_20.jpg";
+import Image11 from "../../assets/img/o_mundo_fantastico_das_sardinhas_lisboa_portugal_10_19.jpg";
+import Image12 from "../../assets/img/cabelo_cumprido_faro_portugal_10_19.jpg";
+import Image13 from "../../assets/img/amigos_desconhecidos_na_balada_dublin_07_19.jpg";
+import Image14 from "../../assets/img/talbot_st_dublin_07_19.jpg";
+
+
 
 interface Photo {
   id: string;
@@ -16,18 +27,20 @@ interface Photo {
 }
 
 const mockPhotos: Photo[] = [
-  { id: "1", src: Image1, caption: "Explorando as montanhas – um dia de paz total! 🌄", date: "2025-09-15", alt: "Foto de montanhas ao amanhecer" },
-  { id: "2", src: Image2, caption: "Café com vista pro mar, reset das ideias. ☕", date: "2025-09-10", alt: "Café da manhã à beira-mar" },
-  { id: "3", src: Image3, caption: "Noite estrelada – pensando no próximo código. ✨", date: "2025-08-28", alt: "Céu estrelado à noite" },
-  { id: "4", src: Image4, caption: "Passeio de bike pela cidade velha. 🚲", date: "2025-08-20", alt: "Passeio de bicicleta urbana" },
-  { id: "5", src: Image5, caption: "Ler um livro no parque – minha terapia favorita. 📖", date: "2025-08-15", alt: "Leitura em um parque arborizado" },
-  { id: "6", src: Image1, caption: "Festival de música ao ar livre – energia pura! 🎶", date: "2025-07-30", alt: "Festival de música noturno" },
-  { id: "7", src: Image2, caption: "Cozinhando algo novo – experimentos na cozinha. 🍳", date: "2025-07-25", alt: "Momento na cozinha preparando uma refeição" },
-  { id: "8", src: Image3, caption: "Amigos e risadas – o que importa de verdade. 👯‍♂️", date: "2025-07-18", alt: "Encontro com amigos em um café" },
-  { id: "9", src: Image4, caption: "Pôr do sol perfeito – gratidão pelo dia. 🌅", date: "2025-07-10", alt: "Pôr do sol na praia" },
-  { id: "10", src: Image5, caption: "Corrida matinal – energia pro dia todo. 🏃‍♂️", date: "2025-06-28", alt: "Corrida ao amanhecer" },
-  { id: "11", src: Image1, caption: "Arte de rua em viagem – inspirações visuais. 🎨", date: "2025-06-20", alt: "Grafite em parede urbana" },
-  { id: "12", src: Image2, caption: "Chuva e um bom chá – momentos introspectivos. ☔", date: "2025-06-15", alt: "Janela com chuva e xícara de chá" },
+  { id: "1", src: Image1, caption: "Voando na paz total! 🌄", date: "2025-10-10", alt: "Foto da janela do avião" },
+  { id: "2", src: Image2, caption: "Melhor lamen de SP", date: "2025-05-10", alt: "Foto de um chef preparando lamen"},
+  { id: "3", src: Image3, caption: "Mercadão de São Paulo", date: "2025-05-12", alt: "Foto dmercadão de São Paulp"},
+  { id: "4", src: Image4, caption: "Casa da Cultura Mario Quintana Porto Alegre - Rio Grande do Sul", date: "2025-10-01", alt: "Foto de duas torres cor de rosa, chamada Casa da Cultura Mario Quintana"},
+  { id: "5", src: Image5, caption: "Homenagem à Elis Regina Porto Alegre - Rio Grande do Sul", date: "2025-10-01", alt: "Foto de uma estátua da cantora Elis Regina"},
+  { id: "6", src: Image6, caption: "Esquadrão da Alegria em Laranjal - Rio Grande do Sul", date: "2025-10-01", alt: "Foto de um grupo de pessoas sentadas à frente de um letreiro escrito 'Laranjal' da cidade de Laranjal no RS"},
+  { id: "7", src: Image7, caption: "Howth - Irlanda", date: "2019-09-01", alt: "Foto de um desenho do mapa de Howth - Irlanda"},
+  { id: "8", src: Image8, caption: "Peixe da sorte em Belfast - Irlanda do Norte", date: "2020-09-01", alt: "Foto minha beijando um monumento de um peixe em Belfast"},
+  { id: "9", src: Image9, caption: "Museo do Titanic em Belfast - Irlanda do Norte", date: "2020-09-01", alt: "Foto minha à frente de um letreiro metálico escrito 'Titanic'"},
+  { id: "10", src: Image10, caption: "Mercado Central de Cork - Irlanda", date: "2020-09-01", alt: "Foto de uma loja com várias azeitonas em concerva"},
+  { id: "11", src: Image11, caption: "O mundo fantástico das sardinhas em Lisboa - Portugal", date: "2019-10-01", alt: "Foto de prateleiras cheias de sardinha em lata"},
+  { id: "12", src: Image12, caption: "Quando meu cabelo era senssacional em Faro - Portugal", date: "2019-10-01", alt: "Foto minha de cabelo cumprido"},
+  { id: "13", src: Image13, caption: "Amigos desconhecidos na balada em Dublin - Irlanda", date: "2019-07-01", alt: "Foto de pessoas dançando na balada"},
+  { id: "14", src: Image14, caption: "Visão do The Spire pela Talbot St. em Dublin - Irlanda ", date: "2019-07-01", alt: "Foto de um monumento puntido no meio da cidade"},    
 ];
 
 function Album() {
@@ -74,7 +87,11 @@ function Album() {
               <p>
                 {photo.caption}{" "}
                 <span className="date">
-                  ({new Date(photo.date).toLocaleDateString("pt-BR")})
+                  ({new Date(photo.date).toLocaleDateString("pt-BR", {
+                    month: "long",
+                    year: "numeric",
+                  })})
+                  
                 </span>
               </p>
             </div>

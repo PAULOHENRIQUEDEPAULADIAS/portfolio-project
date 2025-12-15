@@ -10,11 +10,11 @@
   justify-content: flex-start;
   align-items: flex-start;
   transition: clip-path 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
-  clip-path: inset(20px 20px 100% 20px);
+  clip-path: inset(20px 20px 100% 20px round 5px);
 }
 
 .overlay.active {
-  clip-path: inset(20px 20px 20px 20px);
+  clip-path: inset(20px 20px 20px 20px round 5px);
 }
 
 .overlayContent {
@@ -57,7 +57,7 @@
 
 /* Links */
 .menuItem a {
-  color: #0f4c91;
+  color: #0b396f;
   font-size: 3rem;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -71,8 +71,8 @@
 
 /* Descrições */
 .menuItem span {
-  color: #1565c0;
-  font-size: 1rem;
+  color: #13365d;
+  font-size: 1.2rem;
   flex-shrink: 0;
 }
 

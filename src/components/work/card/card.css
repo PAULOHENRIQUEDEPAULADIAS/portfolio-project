@@ -1,9 +1,15 @@
 .card {
-  background-color: var(--card-bg-color);
+  background-color: var(--color-bg);
   color: var(--card-text-color);
   border: 1px solid transparent;
   border-radius: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid #306481;
+}
+
+.card:hover{
+  background-color: #306481;
+  color: #FFFFFF;
 }
 
 .card-link {

@@ -23,11 +23,12 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.2s ease;
-  border-bottom: 1px solid black;
+  border: 1px solid #306481;
 }
 
 .text-card:hover {
-  border: 1px solid black;
+  background-color: #306481;
+  color: #FFFFFF;
   
 }
 

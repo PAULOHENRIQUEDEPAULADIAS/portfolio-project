@@ -15,6 +15,8 @@ import Image11 from "../../assets/img/o_mundo_fantastico_das_sardinhas_lisboa_po
 import Image12 from "../../assets/img/cabelo_cumprido_faro_portugal_10_19.jpg";
 import Image13 from "../../assets/img/amigos_desconhecidos_na_balada_dublin_07_19.jpg";
 import Image14 from "../../assets/img/talbot_st_dublin_07_19.jpg";
+import Image15 from "../../assets/img/carnaval_sp_02_24.jpg";
+
 
 
 
@@ -33,6 +35,7 @@ const mockPhotos: Photo[] = [
   { id: "4", src: Image4, caption: "Casa da Cultura Mario Quintana Porto Alegre - Rio Grande do Sul", date: "2025-10-01", alt: "Foto de duas torres cor de rosa, chamada Casa da Cultura Mario Quintana"},
   { id: "5", src: Image5, caption: "Homenagem à Elis Regina Porto Alegre - Rio Grande do Sul", date: "2025-10-01", alt: "Foto de uma estátua da cantora Elis Regina"},
   { id: "6", src: Image6, caption: "Esquadrão da Alegria em Laranjal - Rio Grande do Sul", date: "2025-10-01", alt: "Foto de um grupo de pessoas sentadas à frente de um letreiro escrito 'Laranjal' da cidade de Laranjal no RS"},
+  { id: "15", src: Image15, caption: "Meus queridos do Carnaval de SP", date: "2024-02-01", alt: "Foto de um grupo de amigos"},
   { id: "7", src: Image7, caption: "Howth - Irlanda", date: "2019-09-01", alt: "Foto de um desenho do mapa de Howth - Irlanda"},
   { id: "8", src: Image8, caption: "Peixe da sorte em Belfast - Irlanda do Norte", date: "2020-09-15", alt: "Foto minha beijando um monumento de um peixe em Belfast"},
   { id: "9", src: Image9, caption: "Museo do Titanic em Belfast - Irlanda do Norte", date: "2020-09-01", alt: "Foto minha à frente de um letreiro metálico escrito 'Titanic'"},
@@ -40,7 +43,7 @@ const mockPhotos: Photo[] = [
   { id: "11", src: Image11, caption: "O mundo fantástico das sardinhas em Lisboa - Portugal", date: "2019-10-01", alt: "Foto de prateleiras cheias de sardinha em lata"},
   { id: "12", src: Image12, caption: "Quando meu cabelo era senssacional em Faro - Portugal", date: "2019-10-01", alt: "Foto minha de cabelo cumprido"},
   { id: "13", src: Image13, caption: "Amigos desconhecidos na balada em Dublin - Irlanda", date: "2019-07-01", alt: "Foto de pessoas dançando na balada"},
-  { id: "14", src: Image14, caption: "Visão do The Spire pela Talbot St. em Dublin - Irlanda ", date: "2019-07-01", alt: "Foto de um monumento puntido no meio da cidade"},    
+  { id: "14", src: Image14, caption: "Visão do The Spire pela Talbot St. em Dublin - Irlanda ", date: "2019-07-01", alt: "Foto de um monumento puntido no meio da cidade"},      
 ];
 
 function Album() {

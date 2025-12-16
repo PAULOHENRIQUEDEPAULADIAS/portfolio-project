@@ -34,7 +34,7 @@ const mockPhotos: Photo[] = [
   { id: "5", src: Image5, caption: "Homenagem à Elis Regina Porto Alegre - Rio Grande do Sul", date: "2025-10-01", alt: "Foto de uma estátua da cantora Elis Regina"},
   { id: "6", src: Image6, caption: "Esquadrão da Alegria em Laranjal - Rio Grande do Sul", date: "2025-10-01", alt: "Foto de um grupo de pessoas sentadas à frente de um letreiro escrito 'Laranjal' da cidade de Laranjal no RS"},
   { id: "7", src: Image7, caption: "Howth - Irlanda", date: "2019-09-01", alt: "Foto de um desenho do mapa de Howth - Irlanda"},
-  { id: "8", src: Image8, caption: "Peixe da sorte em Belfast - Irlanda do Norte", date: "2020-09-01", alt: "Foto minha beijando um monumento de um peixe em Belfast"},
+  { id: "8", src: Image8, caption: "Peixe da sorte em Belfast - Irlanda do Norte", date: "2020-09-15", alt: "Foto minha beijando um monumento de um peixe em Belfast"},
   { id: "9", src: Image9, caption: "Museo do Titanic em Belfast - Irlanda do Norte", date: "2020-09-01", alt: "Foto minha à frente de um letreiro metálico escrito 'Titanic'"},
   { id: "10", src: Image10, caption: "Mercado Central de Cork - Irlanda", date: "2020-09-01", alt: "Foto de uma loja com várias azeitonas em concerva"},
   { id: "11", src: Image11, caption: "O mundo fantástico das sardinhas em Lisboa - Portugal", date: "2019-10-01", alt: "Foto de prateleiras cheias de sardinha em lata"},
